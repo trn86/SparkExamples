@@ -42,18 +42,19 @@ Take - taken n no of rdd objects as specified in take(n)
 
 The same operations are available for Spark Sql as well.
 
-Actions :
+Sql Actions :
 
 show() -> To display data in tabular format
 show(false) -> To display data in tabular format with formatted output
 show(n) -> To display n no of data in tabular format
 count() -> returns count
 
-Transformations :
+Sql Transformations :
 
 select -> select no no of columns specified
 groupBy -> aggregate operation based on column specified
 
 com.spark.rdd.example -> Contains Spark RDD Example
 com.spark.sql.example -> Contains Spark Sql Example
+com.spark.cassandra.exmple -> Constains Spark RDD and Spark Sql example for connecting,reading,updating data with Spark Sql and with Datastax Cassandra Connector
 com.my.spark.context -> Create spark context and spark session

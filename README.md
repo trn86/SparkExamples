@@ -58,3 +58,28 @@ com.spark.rdd.example -> Contains Spark RDD Example
 com.spark.sql.example -> Contains Spark Sql Example
 com.spark.cassandra.exmple -> Constains Spark RDD and Spark Sql example for connecting,reading,updating data with Spark Sql and with Datastax Cassandra Connector
 com.my.spark.context -> Create spark context and spark session
+
+To work with cassandra examples,you need to install apache cassadndra datatabse and python to connect to cqlsh (the cassandra client).
+You need to created the keyspace (database) and then the table.Follow these steps in cqlsh :
+
+CREATE KEYSPACE mydb WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 1};
+
+use mydb;
+
+CREATE TABLE  employee(
+    empId varchar,
+    name varchar,
+    age int,
+    dept varchar,
+    PRIMARY KEY(empId)
+);
+
+insert into employee (empId,name,age,dept) values ('1','Tarun',31,'R & D');
+insert into employee (empId,name,age,dept) values ('2','Jeetu',39,'R & D');
+insert into employee (empId,name,age,dept) values ('3','Tamana',20,'R & D-Intern');
+insert into employee (empId,name,age,dept) values ('4','Bheem',33,'Admin');
+insert into employee (empId,name,age,dept) values ('5','Ashish',48,'Security');
+insert into employee (empId,name,age,dept) values ('6','Neesha',27,'HR');
+insert into employee (empId,name,age,dept) values ('7','TarunV',30,'Finance');
+
+

@@ -20,6 +20,23 @@ To work with spark rdd,you require spark-sql_2.11 ,add this to you maven depende
 			<version>2.4.0</version>
 		</dependency>
 
+To work with spark and cassandra rdd,you require spark-cassandra-connector_2.11 ,add this to you maven dependency:
+<!-- Required for using spark cassandra !-->
+		<dependency>
+			<groupId>com.datastax.spark</groupId>
+			<artifactId>spark-cassandra-connector_2.11</artifactId>
+			<version>2.4.0</version>
+		</dependency>
+		
+
+To work with spark and my sql,you require mysql-connector-java,add this to you maven dependency:
+<!-- Required for using mysql connector java !-->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.19</version>
+		</dependency>
+
 RDD has 2 operations
 
 Transformations (Are evaluated lazily) :
@@ -82,4 +99,30 @@ insert into employee (empId,name,age,dept) values ('5','Ashish',48,'Security');
 insert into employee (empId,name,age,dept) values ('6','Neesha',27,'HR');
 insert into employee (empId,name,age,dept) values ('7','TarunV',30,'Finance');
 
+
+For My Sql :
+
+CREATE DATABASE myDatabase;
+
+
+mysql -u root -p
+
+Wh@tever123
+
+create Database mydb;
+
+use mydb;
+
+create table mydb.employee (
+id INT AUTO_INCREMENT PRIMARY KEY,
+name varchar(20),
+dept varchar(10),
+salary int(10)
+);
+
+insert into mydb.employee values(100,'Thomas','Sales',5000);
+insert into mydb.employee values(200,'Jason','Technology',5500);
+insert into mydb.employee values(300,'Mayla','Technology',7000);
+insert into mydb.employee values(400,'Nisha','Marketing',9500);
+insert into mydb.employee values(500,'Randy','Technology',6000);
 

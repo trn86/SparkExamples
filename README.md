@@ -107,7 +107,7 @@ CREATE DATABASE myDatabase;
 
 mysql -u root -p
 
-Wh@tever123
+mypassword
 
 create Database mydb;
 

@@ -108,7 +108,7 @@ mysql -u root -p
 mypassword
 
 
---create Database mydb;
+create database mydb;
 
 use mydb;
 

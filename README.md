@@ -1,4 +1,4 @@
-# SparkExamples
+## Spark DataFrame Examples using MySql and Cassandra
 
 This is all code for spark rdd and spark sql examples.
 
